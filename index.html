@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jerry Wang - Academic Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="name">Jerry Wang</h1>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="label">Phone:</span>
+                    <span class="value">949-878-8117</span>
+                </div>
+                <div class="contact-item">
+                    <span class="label">Academic Email:</span>
+                    <a href="mailto:Jerry.Wang@smes.org" class="value">Jerry.Wang@smes.org</a>
+                </div>
+                <div class="contact-item">
+                    <span class="label">Personal Email:</span>
+                    <a href="mailto:shengyuwang0329@gmail.com" class="value">shengyuwang0329@gmail.com</a>
+                </div>
+            </div>
+            
+            <div class="resume-download">
+                <a href="Resume -  Jerry Wang.pdf" download="Jerry_Wang_Resume.pdf" class="download-btn">
+                    <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7,10 12,15 17,10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    Download Resume
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="tab-navigation">
+        <div class="container">
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="about">About</button>
+                <button class="tab-btn" data-tab="research">Research</button>
+                <button class="tab-btn" data-tab="experience">Experience</button>
+                <button class="tab-btn" data-tab="achievements">Achievements</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main">
+        <div class="container">
+            <!-- About Tab -->
+            <div class="tab-content active" id="about">
+                <section class="section education">
+                    <h2 class="section-title">Education</h2>
+                    <div class="education-entry">
+                        <div class="school-header">
+                            <div class="school-info">
+                                <h3 class="institution">St. Margaret's Episcopal School</h3>
+                                <div class="location">San Juan Capistrano, CA</div>
+                                <div class="duration">2018 - Present</div>
+                            </div>
+                            <img src="images/St. Margaret's Episcopal School.jpg" alt="St. Margaret's Episcopal School campus" class="school-image">
+                        </div>
+                        
+                        <div class="academic-metrics">
+                            <div class="metric">
+                                <span class="metric-label">Academic Weighted GPA (9th-11th):</span>
+                                <span class="metric-value">4.34/5.0</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Unweighted GPA (9th-11th):</span>
+                                <span class="metric-value">3.82/4.0</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">SAT Score (2024):</span>
+                                <span class="metric-value">1540/1600 (Math: 790, Reading & Writing: 750)</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">PSAT Score (2024):</span>
+                                <span class="metric-value">1460/1520 (Math: 760, Reading & Writing: 700)</span>
+                            </div>
+                        </div>
+
+                        <div class="ap-courses">
+                            <h4>Advanced Placement Courses (10 total):</h4>
+                            <ul class="ap-list">
+                                <li>AP Physics C Mechanics</li>
+                                <li>AP Latin</li>
+                                <li>AP Macroeconomics</li>
+                                <li>AP US History</li>
+                                <li>AP Computer Science Principles</li>
+                                <li>AP Computer Science A</li>
+                                <li>AP Calculus AB</li>
+                                <li>AP Calculus BC</li>
+                                <li>AP Literature</li>
+                                <li>AP Biology</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section summer-programs">
+                    <h2 class="section-title">Summer Programs</h2>
+                    
+                    <div class="program">
+                        <h3 class="program-title">Johns Hopkins - Explore Engineering Innovation</h3>
+                        <div class="program-duration">June 2023 - July 2023 (4 weeks)</div>
+                        <p class="program-description">
+                            Learned the basics and intricacies of engineering. Lived on campus and connected with future aspiring engineers. 
+                            This experience inspired continued pursuit of an engineering career.
+                        </p>
+                    </div>
+
+                    <div class="program">
+                        <h3 class="program-title">UPenn ESAP - Robotics Specialization</h3>
+                        <div class="program-duration">July 2025 (3 weeks)</div>
+                        <p class="program-description">
+                            Learned about electronics, circuitry, Arduinos, and design processes. Created a robotic recorder 
+                            as part of a robotic orchestra, capable of playing any song transmitted through WiFi.
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Research Tab -->
+            <div class="tab-content" id="research">
+                <section class="section research-projects">
+                    <h2 class="section-title">Research Projects</h2>
+                    
+                    <div class="project">
+                        <h3 class="project-title">AI Pup Trainer</h3>
+                        <div class="project-duration">2023 - 2024</div>
+                        <ul class="project-details">
+                            <li>Built a device that trains dogs using image detection and machine learning</li>
+                            <li>Integrated camera, inference, and actuator control systems</li>
+                            <li>Published research paper at the SIPM conference (2024) documenting approach and results</li>
+                        </ul>
+                    </div>
+
+                    <div class="project">
+                        <h3 class="project-title">Robotic Recorder (UPenn ESAP — Robotics)</h3>
+                        <div class="project-duration">July 2025</div>
+                        <ul class="project-details">
+                            <li>Designed and built a Wi-Fi-controlled recorder as part of a robotic orchestra</li>
+                            <li>Implemented electronics, firmware, and mechanical actuation to play MIDI-driven songs</li>
+                        </ul>
+                    </div>
+
+                    <div class="project">
+                        <h3 class="project-title">Nanotechnology Research (ACS Nano Publication)</h3>
+                        <div class="project-duration">2024</div>
+                        <ul class="project-details">
+                            <li>Co-authored a research paper published on ACS Nano</li>
+                            <li>Focused on application of nanotech for spatial optics</li>
+                            <li>Contributed to cutting-edge research in nanotechnology applications</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Experience Tab -->
+            <div class="tab-content" id="experience">
+                <div class="university-logos">
+                    <h3 class="logos-title">Research Institutions & Organizations</h3>
+                    <div class="logos-grid">
+                        <img src="images/usc.png" alt="University of Southern California logo" class="uni-logo">
+                        <img src="images/tulane.jpg" alt="Tulane University logo" class="uni-logo">
+                        <img src="images\intelligenome.jpg" alt="Intelligenome logo" class="uni-logo">
+                    </div>
+                </div>
+                
+                <section class="section work-experience">
+                    <h2 class="section-title">Research & Work Experience</h2>
+                    
+                    <div class="experience-item">
+                        <h3 class="position-title">Research Intern — University of Southern California (Biomedical Engineering)</h3>
+                        <div class="position-duration">July 2024</div>
+                        <ul class="position-details">
+                            <li>Studied environmental impact of MRI and CT contrast agents</li>
+                            <li>Surveyed mitigation approaches (removal and degradation pathways)</li>
+                            <li>Summarized findings for internal notes and discussions</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-item">
+                        <h3 class="position-title">Technical Assistant — Hura Imaging (USC-affiliated medical imaging startup)</h3>
+                        <div class="position-duration">July 2024 – December 2024</div>
+                        <ul class="position-details">
+                            <li>Supported server maintenance and home-based data streaming for imaging workflows</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-item">
+                        <h3 class="position-title">Research Intern — Tulane University</h3>
+                        <div class="position-duration">July 2024 – August 2024</div>
+                        <ul class="position-details">
+                            <li>Explored applications of machine learning for TB drug-resistance identification</li>
+                            <li>Conducted literature review and assisted with data preparation and analysis</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-item">
+                        <h3 class="position-title">Business/Conference Intern — Intelligenome (ADLM, 2024)</h3>
+                        <div class="position-duration">July 2024</div>
+                        <ul class="position-details">
+                            <li>Supported outreach for CRISPR-based TB detection kits</li>
+                            <li>Engaged prospective partners and collected product-feedback notes</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Achievements Tab -->
+            <div class="tab-content" id="achievements">
+                <section class="section honors">
+                    <h2 class="section-title">Honors and Awards</h2>
+                    
+                    <div class="award-category">
+                        <h3 class="category-title">National Recognition</h3>
+                        <ul class="award-list">
+                            <li class="award-item">
+                                <span class="award-name">1st place winner GameGala</span>
+                                <span class="award-year">(2024)</span>
+                            </li>
+                            <li class="award-item">
+                                <span class="award-name">Performed in Carnegie Hall</span>
+                                <span class="award-year">(2022)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="award-category">
+                        <h3 class="category-title">School Honors</h3>
+                        <ul class="award-list">
+                            <li class="award-item">
+                                <span class="award-name">Head of School Honors (5 times)</span>
+                                <span class="award-year">(2022-Present)</span>
+                            </li>
+                            <li class="award-item">
+                                <span class="award-name">President of Esports Club</span>
+                                <span class="award-year">(2023-Present)</span>
+                            </li>
+                            <li class="award-item">
+                                <span class="award-name">Stage Crew Tech for Upper School Plays</span>
+                                <span class="award-year">(2022-Present)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="section extracurricular">
+                    <h2 class="section-title">Extracurricular Activities</h2>
+                    <ul class="activity-list">
+                        <li class="activity-item">
+                            <span class="activity-name">Volunteer at OC Discovery Cube</span>
+                            <span class="activity-duration">(2023-Present)</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-name">Esports Club Leadership - hosted Upper School events and competed against other schools</span>
+                            <span class="activity-duration">(2023-Present)</span>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Jerry Wang. Academic Portfolio.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
