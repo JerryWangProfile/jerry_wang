@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.youtube.com)",
+      "WebFetch(domain:apps.apple.com)",
+      "WebFetch(domain:sites.google.com)",
+      "WebFetch(domain:www.csitcp.com)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
