@@ -4,7 +4,8 @@
       "WebFetch(domain:www.youtube.com)",
       "WebFetch(domain:apps.apple.com)",
       "WebFetch(domain:sites.google.com)",
-      "WebFetch(domain:www.csitcp.com)"
+      "WebFetch(domain:www.csitcp.com)",
+      "Bash(dir:*)"
     ],
     "deny": [],
     "ask": []
