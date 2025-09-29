@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initMobileMenu();
     initParallaxEffects();
     initCounterAnimations();
-    
+    initPDFModal();
+
     console.log('🎉 Jerry Wang\'s Portfolio Loaded!');
 });
 
@@ -405,3 +406,51 @@ function preloadImages() {
 
 // Initialize preloading
 document.addEventListener('DOMContentLoaded', preloadImages);
+
+// PDF Modal Functions
+function initPDFModal() {
+    const modal = document.getElementById('pdfModal');
+    const modalTitle = document.getElementById('pdfModalTitle');
+    const pdfViewer = document.getElementById('pdfViewer');
+    const closeBtn = document.getElementById('pdfModalClose');
+
+    // Add click listeners to all PDF images
+    const pdfImages = document.querySelectorAll('.clickable-pdf');
+    pdfImages.forEach(img => {
+        img.addEventListener('click', function() {
+            const pdfPath = this.getAttribute('data-pdf');
+            const title = this.getAttribute('data-title');
+
+            modalTitle.textContent = title;
+            pdfViewer.src = pdfPath;
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        });
+    });
+
+    // Close modal when clicking the X
+    closeBtn.addEventListener('click', closePDFModal);
+
+    // Close modal when clicking outside of it
+    modal.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            closePDFModal();
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && modal.style.display === 'block') {
+            closePDFModal();
+        }
+    });
+}
+
+function closePDFModal() {
+    const modal = document.getElementById('pdfModal');
+    const pdfViewer = document.getElementById('pdfViewer');
+
+    modal.style.display = 'none';
+    pdfViewer.src = ''; // Clear the PDF source
+    document.body.style.overflow = 'auto'; // Restore background scrolling
+}
