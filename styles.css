@@ -1277,6 +1277,161 @@ body {
     opacity: 0.8;
 }
 
+/* Vatican Letter Styling */
+.vatican-letter-excerpt {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(99, 102, 241, 0.05);
+    border-left: 3px solid var(--primary-color);
+    border-radius: 8px;
+}
+
+.vatican-letter-excerpt blockquote {
+    margin: 0;
+    font-style: italic;
+    color: var(--text-secondary);
+}
+
+.vatican-letter-excerpt blockquote p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+.vatican-letter-excerpt footer {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-align: right;
+}
+
+.vatican-letter-excerpt.clickable-pdf {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.vatican-letter-excerpt.clickable-pdf:hover {
+    background: rgba(99, 102, 241, 0.1);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.click-hint {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.vatican-letter-excerpt.clickable-pdf:hover .click-hint {
+    opacity: 1;
+}
+
+.click-hint i {
+    font-size: 0.7rem;
+}
+
+/* PDF Modal Styles */
+.pdf-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.pdf-modal-content {
+    position: relative;
+    background-color: var(--bg-primary);
+    margin: 2% auto;
+    width: 90%;
+    height: 90%;
+    border-radius: 12px;
+    box-shadow: var(--shadow-xl);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.pdf-modal-header {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px 12px 0 0;
+}
+
+.pdf-modal-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.pdf-modal-close {
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.pdf-modal-close:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.pdf-modal-body {
+    flex: 1;
+    padding: 0;
+    position: relative;
+    background: #f5f5f5;
+}
+
+.clickable-pdf {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.clickable-pdf:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-lg);
+    filter: brightness(1.1);
+}
+
+/* Mobile responsiveness for PDF modal */
+@media (max-width: 768px) {
+    .pdf-modal-content {
+        margin: 1% auto;
+        width: 98%;
+        height: 95%;
+        border-radius: 8px;
+    }
+
+    .pdf-modal-header {
+        padding: 0.75rem 1rem;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .pdf-modal-header h3 {
+        font-size: 1rem;
+    }
+
+    .pdf-modal-close {
+        font-size: 1.5rem;
+    }
+}
+
 /* Activities Section */
 .activities-grid {
     display: grid;
@@ -1553,10 +1708,47 @@ body {
     
     .nav-menu {
         display: none;
+        position: fixed;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1rem;
+        z-index: 999;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
     }
-    
+
+    .nav-menu.show {
+        display: flex;
+        transform: translateX(0);
+    }
+
+    .nav-link {
+        padding: 1rem 1.5rem;
+        border-radius: 10px;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
     .nav-toggle {
         display: flex;
+    }
+
+    .nav-toggle.active .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .nav-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
     }
 }
 

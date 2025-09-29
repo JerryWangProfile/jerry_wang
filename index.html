@@ -164,7 +164,7 @@
                     <div class="school-details">
                         <h4>St. Margaret's Episcopal School</h4>
                         <p class="location">San Juan Capistrano, CA</p>
-                        <p class="duration">Class of 2025</p>
+                        <p class="duration">Class of 2026</p>
                     </div>
                 </div>
                 <div class="academic-metrics">
@@ -604,15 +604,25 @@
                     </div>
                     <div class="achievement-item highlight award-featured">
                         <div class="achievement-award-header">
-                            <img src="images/pope_letter.png" alt="Letter from the Pope">
+                            <img src="images/pope_letter.png" alt="Letter from the Pope" class="clickable-pdf" data-pdf="letter from the Pope.pdf" data-title="Official Letter from His Holiness the Pope (Vatican Original)">
                         </div>
                         <div class="achievement-icon">
                             <i class="fas fa-church"></i>
                         </div>
                         <div class="achievement-details">
                             <h4>Papal Recognition</h4>
-                            <p>Received personal letter from His Holiness the Pope</p>
-                            <span class="achievement-year">2024</span>
+                            <p>Received official letter from His Holiness the Pope acknowledging environmental commitment and Apostolic Blessing (original Latin document)</p>
+                            <span class="achievement-year">July 14, 2025</span>
+                            <div class="vatican-letter-excerpt clickable-pdf" data-pdf="Vatican_Letter_English.pdf" data-title="Official Letter from His Holiness the Pope (Vatican Original)">
+                                <blockquote>
+                                    <p><em>"The Holy Father warmly encourages you to let this concern remain ever dynamic and fruitful. He also affirms that your commitment is in harmony with the mission of the Church, and with the spirit of Laudato Si'..."</em></p>
+                                    <footer>— Vatican Secretariat of State</footer>
+                                </blockquote>
+                                <div class="click-hint">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>View full translated Vatican letter.</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -628,7 +638,7 @@
                     <div class="achievement-item highlight award-featured">
                         <div class="achievement-award-header">
                             <img src="images/Wang, Shengyu's National Recognition Program Certificate.png"
-                                 alt="National Recognition Certificate">
+                                 alt="National Recognition Certificate" >
                         </div>
                         <div class="achievement-icon">
                             <i class="fas fa-star"></i>
@@ -949,6 +959,19 @@
         <p>&copy; 2025 Jerry Wang. </p>
     </div>
 </footer>
+
+<!-- PDF Modal -->
+<div id="pdfModal" class="pdf-modal">
+    <div class="pdf-modal-content">
+        <div class="pdf-modal-header">
+            <h3 id="pdfModalTitle">Document</h3>
+            <span class="pdf-modal-close" id="pdfModalClose">&times;</span>
+        </div>
+        <div class="pdf-modal-body">
+            <iframe id="pdfViewer" src="" width="100%" height="100%" frameborder="0"></iframe>
+        </div>
+    </div>
+</div>
 
 <script src="script.js"></script>
 </body>
